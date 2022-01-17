@@ -2,7 +2,10 @@ import BookItems from './BookItems';
 
 const BookList = () => (
   <ul>
-    <BookItems />
+    <BookItems
+      title="Legions of people"
+      author="Mike Dean"
+    />
   </ul>
 );
 
