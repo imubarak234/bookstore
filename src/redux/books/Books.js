@@ -1,28 +1,27 @@
-import BookContainer from "../../components/BookContainer";
-
-const ADD_Book = 'bookStore/books/ADD_BOOK';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = [];
 
-export const addBook = payload => ({
-  type: ADD_Book,
-  payload: payload,
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
 });
 
-export const removeBook = payload => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  payload: payload,
+  payload,
 });
 
-export default reducer = (state = initialState, action) => {
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_Book:
+    case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter(book => book.id !== payload)
+      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }
 };
 
+export default booksReducer;

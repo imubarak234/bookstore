@@ -1,17 +1,40 @@
-const AddBooks = () => (
-  <form>
-    <div class="row g-3">
-        <div class="mb-2 mt-3 col-md-6">
-          <label for="author" className="form-label">Author:</label>
-          <input type="text" className="form-control" id="author" placeholder="Author" name="author" required />
+import PropTypes from 'prop-types';
+
+const AddBooks = (props) => {
+  const { adds } = props;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const ans = e.target;
+    const title = ans.author.value;
+    const author = ans.title.value;
+    adds(title, author);
+    ans.author.value = '';
+    ans.title.value = '';
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="row g-3">
+        <div className="mb-2 mt-3 col-md-6">
+          <label htmlFor="author" className="form-label">
+            Author:
+            <input type="text" className="form-control" id="author" placeholder="Author" name="author" required />
+          </label>
         </div>
-        <div class="mb-3 col-md-6">
-          <label for="title" className="form-label">Title:</label>
-          <input type="text" className="form-control" id="title" placeholder="Title" name="title" required />
+        <div className="mb-3 col-md-6">
+          <label htmlFor="title" className="form-label">
+            Title:
+            <input type="text" className="form-control" id="title" placeholder="Title" name="title" required />
+          </label>
         </div>
       </div>
-    <button type="submit" className="btn">Add</button>
-  </form>
-);
+      <button type="submit" className="btn bg-secondary">Add</button>
+    </form>
+  );
+};
+
+AddBooks.propTypes = {
+  adds: PropTypes.func.isRequired,
+};
 
 export default AddBooks;

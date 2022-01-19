@@ -1,12 +1,14 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import booksReducer from './books/Books';
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+  booksReducer,
+});
 
-const store = createStroe(
+const store = createStore(
   reducer,
-  applyMiddleware(logger)
+  applyMiddleware(logger),
 );
 
 export default store;

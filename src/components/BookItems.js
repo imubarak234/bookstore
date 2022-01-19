@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 
 const BookItems = (props) => {
-  const { title, author } = props;
+  const {
+    title, author, removing, ids,
+  } = props;
+
   return (
-    <li>
+    <li className="d-flex w-50 justify-content-between">
       <p>
         Title:
         {title}
@@ -12,7 +15,7 @@ const BookItems = (props) => {
         Author:
         {author}
       </p>
-      <button type="button">Remove</button>
+      <button type="button" onClick={() => removing(ids)}>Remove</button>
     </li>
   );
 };
@@ -20,6 +23,8 @@ const BookItems = (props) => {
 BookItems.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  removing: PropTypes.func.isRequired,
+  ids: PropTypes.string.isRequired,
 };
 
 export default BookItems;
