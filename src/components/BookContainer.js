@@ -3,25 +3,26 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import BookList from './BookList';
 import AddBooks from './AddBooks';
-import { addBook, removeBook } from '../redux/books/Books';
+import { addBookAsync, removeBookAsync } from '../redux/books/Books';
 
 const BookContainer = () => {
   const dispatch = useDispatch();
 
   const states = useSelector((state) => state.booksReducer, shallowEqual);
 
-  const submitBookToStore = (title, author) => {
+  const submitBookToStore = (title, category) => {
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
-      author,
+      category,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(addBookAsync(newBook));
   };
 
   const hanldeRemove = (ids) => {
-    dispatch(removeBook(ids));
+    const newNode = { item_id: ids };
+    dispatch(removeBookAsync(newNode));
   };
 
   return (

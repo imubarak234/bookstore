@@ -5,10 +5,10 @@ const AddBooks = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const ans = e.target;
-    const title = ans.author.value;
-    const author = ans.title.value;
-    adds(title, author);
-    ans.author.value = '';
+    const category = ans.category.value;
+    const title = ans.title.value;
+    adds(title, category);
+    ans.category.value = '';
     ans.title.value = '';
   };
 
@@ -16,9 +16,9 @@ const AddBooks = (props) => {
     <form onSubmit={handleSubmit}>
       <div className="row g-3">
         <div className="mb-2 mt-3 col-md-6">
-          <label htmlFor="author" className="form-label">
-            Author:
-            <input type="text" className="form-control" id="author" placeholder="Author" name="author" required />
+          <label htmlFor="category" className="form-label">
+            Category:
+            <input type="text" className="form-control" id="category" placeholder="Category" name="category" required />
           </label>
         </div>
         <div className="mb-3 col-md-6">

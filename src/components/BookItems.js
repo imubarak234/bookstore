@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const BookItems = (props) => {
   const {
-    title, author, removing, ids,
+    title, category, removing, ids,
   } = props;
 
   return (
@@ -12,8 +12,8 @@ const BookItems = (props) => {
         {title}
       </p>
       <p>
-        Author:
-        {author}
+        Category:
+        {category}
       </p>
       <button type="button" onClick={() => removing(ids)}>Remove</button>
     </li>
@@ -22,7 +22,7 @@ const BookItems = (props) => {
 
 BookItems.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   removing: PropTypes.func.isRequired,
   ids: PropTypes.string.isRequired,
 };

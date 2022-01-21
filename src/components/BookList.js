@@ -7,10 +7,10 @@ const BookList = (props) => {
     <ul>
       {list.map((book) => (
         <BookItems
-          key={book.id}
-          ids={book.id}
+          key={book.item_id}
+          ids={book.item_id}
           title={book.title}
-          author={book.author}
+          category={book.category}
           removing={removes}
         />
       ))}
@@ -21,9 +21,9 @@ const BookList = (props) => {
 BookList.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      item_id: PropTypes.string,
       title: PropTypes.string,
-      author: PropTypes.string,
+      category: PropTypes.string,
     }),
   ).isRequired,
   removes: PropTypes.func.isRequired,
