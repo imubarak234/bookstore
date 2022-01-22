@@ -13,22 +13,16 @@ const AddBooks = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="row g-3">
-        <div className="mb-2 mt-3 col-md-6">
-          <label htmlFor="category" className="form-label">
-            Category:
-            <input type="text" className="form-control" id="category" placeholder="Category" name="category" required />
-          </label>
+    <form action="#" className="py-5" onSubmit={handleSubmit}>
+      <div className="row g-3 d-flex">
+        <div className="mb-2 mt-3 col-md-7">
+          <input type="text" id="titles" className="form-control p-3" placeholder="Book Title" name="title" required />
         </div>
-        <div className="mb-3 col-md-6">
-          <label htmlFor="title" className="form-label">
-            Title:
-            <input type="text" className="form-control" id="title" placeholder="Title" name="title" required />
-          </label>
+        <div className="mt-3 col-md-3">
+          <input type="text" id="category" className="form-control p-3" placeholder="Category ▼" name="category" required />
         </div>
+        <button type="submit" className="mb-2 mt-3 col-md-2 btn" id="both">ADD BOOKS</button>
       </div>
-      <button type="submit" className="btn bg-secondary">Add</button>
     </form>
   );
 };
