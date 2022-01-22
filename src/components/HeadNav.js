@@ -15,12 +15,12 @@ const Naver = () => (
         <div className="collapse navbar-collapse justify-content-start">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link text-dark fw-normal pe-4" to="/">
+              <NavLink className="nav-link fw-normal pe-4" to="/">
                 Books
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-dark fw-normal pe-4" to="/categories">
+              <NavLink className="nav-link fw-normal pe-4" to="/categories">
                 Categories
               </NavLink>
             </li>
