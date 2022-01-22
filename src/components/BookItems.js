@@ -21,7 +21,7 @@ const BookItems = (props) => {
         <div className="d-flex w-50 justify-content-around align-items-center">
           <div className="others w-50 d-flex">
             <div className="Oval-2" />
-            <div>
+            <div className="ps-4">
               <p className="h1">64%</p>
               <p>Completed</p>
             </div>

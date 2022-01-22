@@ -8,8 +8,8 @@ const AddBooks = (props) => {
     const category = ans.category.value;
     const title = ans.title.value;
     adds(title, category);
-    ans.category.value = '';
     ans.title.value = '';
+    ans.category.value = 'Category ▼';
   };
 
   return (
@@ -21,7 +21,13 @@ const AddBooks = (props) => {
             <input type="text" id="titles" className="form-control p-3" placeholder="Book Title" name="title" required />
           </div>
           <div className="mt-3 col-md-3">
-            <input type="text" id="category" className="form-control p-3" placeholder="Category ▼" name="category" required />
+            <select className="form-select p-3" aria-label="Default select example" id="category" name="category">
+              <option selected>Category ▼</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Classic">Classic</option>
+            </select>
           </div>
           <button type="submit" className="mb-2 mt-3 col-md-2 btn" id="both">ADD BOOKS</button>
         </div>
