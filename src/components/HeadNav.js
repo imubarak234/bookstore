@@ -1,27 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './BookContainer.css';
 
 const Naver = () => (
-  <div className="navs">
-    <nav className="navbar navbar-expand navbar-dark bg-dark">
+  <div className="navs navigate">
+    <nav className="navbar navbar-expand-lg navbar-light bg-lignt lead">
       <div className="container">
-        <NavLink className="navbar-brand" to="/">
+        <NavLink className="navbar-brand h1 fw-normal" to="/" id="title">
           Bookstore CMS
         </NavLink>
-        <div>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse justify-content-start">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link fw-normal pe-4" to="/">
                 Books
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/categories">
+              <NavLink className="nav-link fw-normal pe-4" to="/categories">
                 Categories
               </NavLink>
             </li>
+
           </ul>
         </div>
+        <i className="bi bi-person-circle h1" id="headicon" />
       </div>
     </nav>
   </div>

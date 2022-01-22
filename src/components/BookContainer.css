@@ -1,0 +1,124 @@
+#title {
+  color: #0290ff;
+  font-weight: bolder;
+  font-size: 1.8em;
+}
+
+.navigate ul {
+  color: #0290ff;
+}
+
+.bookys {
+  background-color: white;
+  border: 2px solid #fafafa;
+}
+
+#form-title {
+  color: #888;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#headicon {
+  color: #0290ff;
+}
+
+.navigate {
+  background-color: white;
+}
+
+.space {
+  background-color: #e8e8e8;
+  height: 1em;
+  width: 100%;
+}
+
+#first {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.Rectangle-3 {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.texters ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.bookys p {
+  margin-bottom: 0;
+}
+
+.texters ul li button {
+  color: #4386bf;
+}
+
+.texters .cate {
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.texters .title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.texters .author {
+  color: #4386bf;
+  font-size: 1.2em;
+}
+
+.texters .buttons {
+  padding-top: 1em;
+  margin-left: -0.7em;
+}
+
+.texters .middle-man button {
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+form {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#both {
+  background-color: #0290ff;
+  color: white;
+}
+
+.bookys .last-part button {
+  margin-left: -0.8em;
+  color: white;
+  background-color: #0290ff;
+}
+
+.others {
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.bookys .last-part .current {
+  opacity: 0.5;
+}
+
+.bookys .last-part .chapter {
+  font-size: 1.3em;
+}
+
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to bottom, #307bbe, #379cf6) border-box;
+  color: #313149;
+  padding: 10px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-left-color: white;
+  display: inline-block;
+}

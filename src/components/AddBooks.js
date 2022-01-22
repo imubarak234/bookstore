@@ -8,28 +8,32 @@ const AddBooks = (props) => {
     const category = ans.category.value;
     const title = ans.title.value;
     adds(title, category);
-    ans.category.value = '';
     ans.title.value = '';
+    ans.category.value = 'Category ▼';
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="row g-3">
-        <div className="mb-2 mt-3 col-md-6">
-          <label htmlFor="category" className="form-label">
-            Category:
-            <input type="text" className="form-control" id="category" placeholder="Category" name="category" required />
-          </label>
+    <div>
+      <form action="#" className="py-5 container" onSubmit={handleSubmit}>
+        <h3 id="form-title">ADD NEW BOOK</h3>
+        <div className="row gx-5 d-flex">
+          <div className="mb-2 mt-3 col-md-7">
+            <input type="text" id="titles" className="form-control p-3" placeholder="Book Title" name="title" required />
+          </div>
+          <div className="mt-3 col-md-3">
+            <select className="form-select p-3" aria-label="Default select example" id="category" name="category">
+              <option selected>Category ▼</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Classic">Classic</option>
+            </select>
+          </div>
+          <button type="submit" className="mb-2 mt-3 col-md-2 btn" id="both">ADD BOOKS</button>
         </div>
-        <div className="mb-3 col-md-6">
-          <label htmlFor="title" className="form-label">
-            Title:
-            <input type="text" className="form-control" id="title" placeholder="Title" name="title" required />
-          </label>
-        </div>
-      </div>
-      <button type="submit" className="btn bg-secondary">Add</button>
-    </form>
+      </form>
+    </div>
+
   );
 };
 
